@@ -1,0 +1,58 @@
+/* Center page content */
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+/* Floating island card */
+.login-card {
+background: #fff;
+width: 350px;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+animation: floatIn 0.6s ease-out;
+}
+
+
+/* Title */
+.login-card h2 { text-align: center; margin-bottom: 20px; }
+
+
+/* Input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 16px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+}
+
+
+/* Submit button */
+button { width: 100%; background-color: #04AA6D; color: white; padding: 12px; margin-top: 15px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+button:hover { opacity: 0.9; }
+
+
+/* Bottom row for Remember me + Forgot password */
+.bottom-row { margin-top: 15px; display: flex; justify-content: space-between; align-items: center; }
+
+
+.bottom-row .remember { font-size: 14px; }
+.bottom-row .psw a { color: #04AA6D; text-decoration: none; font-size: 14px; }
+.bottom-row .psw a:hover { text-decoration: underline; }
+
+
+/* Animation */
+@keyframes floatIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+
+.fade-out { animation: fadeOut 0.5s forwards; }
+@keyframes fadeOut { to { opacity: 0; transform: scale(0.98); } }

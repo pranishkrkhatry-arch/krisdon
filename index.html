@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>प्र lok - Act Now for Climate</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#home"><img src="logo.png" width="50" height="50"></a>
+    <div class="nav-links">
+    <ul>
+      <li><a href="#tracker"><b>LIVE TRACKER</a></li></b>
+      <li><a href="#shop"><b>SHOP TECH</a></li></b>
+      <li><a href="#kits"><b>KITS</a></li></b>
+      <li><a href="#donate"><b>DONATE</a></li></b>
+    </ul>
+</div>
+    <div class="cart-icon" id="cartIcon">
+      Cart <span id="cartCount">0</span>
+    </div>
+    <div class="account-icon" id="accountIcon" title="Account" style="display:none;">
+      👤
+    </div>
+
+    <div class="account-icon login-link" id="loginBtn">
+      <button id="login-btn">Login</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>One Platform. Real Climate Action.</h1>
+      <p>Track emissions in real-time • Buy green tech • Donate transparently • Get survival kits</p>
+      <a href="#donate" class="btn-primary">Donate Now</a>
+    </div>
+  </section>
+
+  <!-- Live Tracker -->
+  <section id="tracker" class="section">
+    <h2><b>Real-Time Global Emissions</h2></b>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>CO₂ Today</h3>
+        <p id="co2" class="big-number">421.38</p>
+        <span>ppm (parts per million)</span>
+      </div>
+
+      <div class="stat-card">
+        <h3>Temperature Anomaly</h3>
+        <p id="temp" class="big-number">+1.24</p>
+        <span>°C above pre-industrial</span>
+      </div>
+
+      <div class="stat-card">
+        <h3>Deforestation Today</h3>
+        <p id="trees" class="big-number">48,000</p>
+        <span>football fields lost</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Tech Devices -->
+  <section id="shop" class="section bg-light">
+    <h2><b>Climate Tech You Can Buy Now</h2></b>
+
+    <div class="products">
+
+      <div class="product">
+        <img src="portable_solar.png" alt="Portable Solar Charger" width="150" height="150"/>
+        <h3>Portable Solar Charger</h3>
+        <p>Charge anywhere. Saves 200kg CO₂/year</p>
+        <span class="price">$49</span>
+        <button class="btn-buy">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="air_monitor.png" alt="Air Monitor" width="150" height="150"/>
+        <h3>Smart Air Quality Monitor</h3>
+        <p>Real-time PM2.5 & CO₂ tracking</p>
+        <span class="price">$79</span>
+        <button class="btn-buy">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="solar_water_purifier.png" alt="Solar Water Purifier" width="150" height="150"/>
+        <h3>Solar Water Purifier</h3>
+        <p>Clean water for 4 people daily</p>
+        <span class="price">$99</span>
+        <button class="btn-buy">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Food & Health Kits -->
+  <section id="kits" class="section">
+    <h2><b>Climate-Resilient Food & Health Kits</h2></b>
+
+    <div class="kits-grid">
+
+      <div class="kit">
+        <img src="emergency_food_kit.png" alt="Emergency Food Kit" width="150" height="150"/>
+        <h3>Emergency Food Kit</h3>
+        <p>30-day non-perishable, drought-resistant seeds included</p>
+        <button class="btn-buy">$45 – Order for Yourself</button>
+        <button class="btn-donate-kit">Donate a Kit ($45)</button>
+      </div>
+
+      <div class="kit">
+        <img src="health_kit.png" alt="Climate Health Kit" width="150" height="150"/>
+        <h3>Climate Health Kit</h3>
+        <p>N95 masks, water filters, heat-relief meds, telemedicine device</p>
+        <button class="btn-buy">$60 – Order</button>
+        <button class="btn-donate-kit">Donate a Kit ($60)</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Transparent Donation Section -->
+  <!-- Transparent Donation Section -->
+  <section id="donate" class="section bg-light">
+    <h2>100% Transparent Donations</h2>
+    <p>Every dollar is tracked on blockchain. See exactly where it goes.</p>
+    
+    <div class="donation-box">
+      <h3>Donate to Fight Climate Change</h3>
+      <div class="donate-buttons">
+        <button class="donate-btn" data-amount="10">$10</button>
+        <button class="donate-btn" data-amount="25">$25</button>
+        <button class="donate-btn" data-amount="50">$50</button>
+        <input type="number" id="customAmount" placeholder="Custom amount"/>
+      </div>
+      <button id="payNow" class="btn-primary">Donate Securely (Stripe)</button>
+    </div>
+
+    <div class="chart-container">
+      <h3>Where Your Donation Goes (2025)</h3>
+      <canvas id="donationChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 EcoGuard | Built with love for the planet</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
